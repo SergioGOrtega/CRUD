@@ -111,3 +111,10 @@ a:hover {
     text-decoration: underline;
     color: #2d79f3;
 }
+
+#usuarioHelp, #contraseñaHelp {
+    display: none;
+    margin-top: 10px;
+    margin-left: 3px;
+    color: red;
+}

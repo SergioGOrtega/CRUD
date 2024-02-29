@@ -5,39 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/modificacion.css">
     <link rel="shortcut icon" href="./img/empresa.png" type="image/x-icon">
+    <script src="./js/modificacion.js"></script>
     <title>Modificacion de datos</title>
 </head>
 <body>
     
     <div id="container">
 
-        <form class="form-control" method="get">
+        <form class="form-control" action="" method="post" onsubmit="return validation()">
             <p class="title">Editar</p>
             <div class="input-field">
-                <label label for="input">Nombre</label>
-                <input required="" class="input" placeholder="Alejandro" type="text"/>
+                <input onchange="resetear('usuario')" class="input" id="usuario" name="usuario" type="text" placeholder="Alejandro"/>
+                <label id="usuarioLabel" label class="label" for="usuario">Nombre</label>
+                <div id="usuarioHelp">Debe introducir un usuario con una longitud de 8 y 12 caracteres</div>
             </div>
             <div class="input-field">
-                <label label for="input">Apellidos</label>
-                <input required="" class="input" placeholder="López" type="text"/>
+                <input onchange="resetear('apellidos')" class="input" id="apellidos" name="apellidos" type="text" placeholder="López"/>
+                <label id="apellidosLabel" label class="label" for="apellidos">Apellidos</label>
+                <div id="apellidosHelp">Debe introducir al menos 1 apellido</div>
             </div>
             <div class="input-field">
-                <label label for="input">Correo</label>
-                <input required="" class="input" placeholder="alejandro.lopez@gmail.com" type="text"/>
+                <input onchange="resetear('correo')" class="input" id="correo" name="correo" type="text" placeholder="alejandro.lopez@gmail.com	"/>
+                <label id="correoLabel" label class="label" for="correo">Correo</label>
+                <div id="correoHelp">Formato de correo inválido</div>
             </div>
             <div class="input-field">
-                <label label for="input">Contraseña</label>
-                <input required="" class="input" placeholder="ALEJANDROLOPEZ123" type="password"/>
+                <input onchange="resetear('contraseña')" class="input" id="contraseña" name="contraseña" type="password" placeholder="ALEJADROLOPEZ123"/>
+                <label id="contraseñaLabel" class="label" for="contraseña">Contraseña</label>
+                <div id="contraseñaHelp">Debe incluir mayúsculas, minúsculas, dígitos, caracteres especiales y de 8 a 15 caracteres</div>
             </div>
             <div class="input-field">
-                <label label for="input">Teléfono</label>
-                <input required="" class="input" placeholder="612 345 678" type="tel"/>
+                <input onchange="resetear('telefono')" class="input" id="telefono" name="telefono" type="tel" placeholder="612 345 678"/>
+                <label id="telefonoLabel" label class="label" for="telefono">Nº Teléfono</label>
+                <div id="telefonoHelp">Debe tener un mínimo de 9 dígitos y un máximo de 15 dígitos</div>
             </div>
             <div class="input-field">
-                <label label for="input">Localidad</label>
-                <input required="" class="input" placeholder="Madrid" type="text"/>
+                <select onchange="resetearSelect('comunidad')" id="comunidad" name="comunidad">
+                    <option value="0">Madrid</option>
+                    <option value="1">Andalucía</option>
+                    <option value="14">Murcia</option>
+                    <option value="9">Cataluña</option>
+                    <option value="10">Valencia</option>
+                    <option value="11">Extremadura</option>
+                    <option value="8">Castilla La Mancha</option>
+                    <option value="7">Castilla y León</option>
+                    <option value="12">Galicia</option>
+                    <option value="3">Asturias</option>
+                    <option value="6">Cantabria</option>
+                    <option value="16">País Vasco</option>
+                    <option value="15">Navarra</option>
+                    <option value="17">La Rioja</option>
+                    <option value="2">Aragón</option>
+                    <option value="4">Baleares</option>
+                    <option value="5">Canarias</option>
+                    <option value="18">Ceuta</option>
+                    <option value="19">Melilla</option>
+                </select>
+                <div id="comunidadHelp">Seleccione comunidad</div>
             </div>
-            <button class="submit-btn">Guardar cambios</button>
+            <button type="submit" class="submit-btn">Guardar cambios</button>
         </form>
         
     </div>

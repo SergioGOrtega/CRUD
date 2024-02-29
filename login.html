@@ -5,24 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="shortcut icon" href="./img/empresa.png" type="image/x-icon">
+    <script src="./js/login.js"></script>
     <title>Login</title>
 </head>
 <body>
     
     <div id="container">
 
-        <form class="form-control" method="get">
+        <form class="form-control" action="" method="post" onsubmit="return validation()">
             <p class="title">Login</p>
             <div class="input-field">
-            <input required="" class="input" type="text"/>
-            <label class="label" for="input">Correo</label>
+                <input onchange="resetear('usuario')" class="input" id="usuario" name="usuario" type="text"/>
+                <label id="usuarioLabel" class="label" for="usuario">Usuario</label>
+                <div id="usuarioHelp">Debe introducir un usuario con una longitud de 8 y 12 caracteres</div>
             </div>
             <div class="input-field">
-            <input required="" class="input" type="password"/>
-            <label class="label" for="input">Contraseña</label>
+                <input onchange="resetear('contraseña')" class="input" id="contraseña" name="contraseña" type="password"/>
+                <label id="contraseñaLabel" class="label" for="contraseña">Contraseña</label>
+                <div id="contraseñaHelp">Debe incluir mayúsculas, minúsculas, dígitos, caracteres especiales y de 8 a 15 caracteres</div>
             </div>
             <a href="#">¿Olvidaste su contraseña?</a>
-            <button class="submit-btn">Iniciar Sesión</button>
+            <button type="submit" class="submit-btn">Iniciar Sesión</button>
         </form>
         
     </div>

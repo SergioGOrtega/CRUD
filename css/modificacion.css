@@ -69,6 +69,17 @@ body {
     z-index: 2;
 }
 
+.input-field .input:focus ~ .label,
+.input-field .input:valid ~ .label {
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
+    color: #2d79f3;
+    background-color: #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .submit-btn {
     margin-top: 30px;
     height: 55px;
@@ -99,4 +110,41 @@ a {
 a:hover {
     text-decoration: underline;
     color: #2d79f3;
+}
+
+#usuarioHelp, #apellidosHelp, #correoHelp, #contraseñaHelp, #telefonoHelp, #comunidadHelp, #terminosHelp {
+    display: none;
+    margin-top: 10px;
+    margin-left: 3px;
+    color: red;
+}
+
+#terminosLabel {
+    color: #2d79f3;
+}
+
+select {
+    display: inline-block;
+    margin-top: 15px;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem 1.75rem .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center;
+    background-size: 8px 10px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
