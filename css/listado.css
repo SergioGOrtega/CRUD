@@ -85,11 +85,11 @@ table {
 .btn {
   font-weight: bold;
   border: none;
+  margin-left: 10%;
   color: white;
   cursor: pointer;
-  margin-left: 15%;
   border-radius: 10px;
-  width: 35%;
+  width: 40%;
   float: left;
 }
 
@@ -122,7 +122,7 @@ table {
   }
 
   .btn {
-    justify-content: center;
+	width: 35%;
     text-align: center;
   }
 
